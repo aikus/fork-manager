@@ -1,10 +1,22 @@
 {
+  "name": "aikus/fork-manager",
+  "description": "ForkManager is a library for simplifying work with running handlers in parallel processes.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nikita Rusakov",
+      "email": "aikus@yandex.ru"
+    }
+  ],
+  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "Aikus\\ForkManager\\": "src/"
     }
   },
   "require": {
+    "php": ">=8.1",
     "ext-pcntl": "*"
   },
   "require-dev": {
