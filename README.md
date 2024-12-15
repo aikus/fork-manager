@@ -2,7 +2,10 @@ ForkManager is a library for simplifying work with running handlers in parallel 
 
 It is assumed that this library will help automate the launch of the same type of tasks in cron or monitor child processes in daemons.
 # Install
-
+To add a library to your project, run the command:
+```shell
+composer require aikus/fork-manager
+```
 # Fast start
 The easiest way to run child processes sequentially is as follows:
 ```php
