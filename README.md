@@ -99,7 +99,7 @@ interface Worker
     public function afterFinish(ForkManager $manager, WaitStatus $status): void;
 }
 ```
-Methods `setUp()` and `run(For Result $for Result)` are executed in a child process. The `setUp` method is called to prepare the worker in the child process (reopen the database connection, close old file descriptors from the parent process, etc).
+Methods `setUp()` and `run(ForkResult $forkResult)` are executed in a child process. The `setUp` method is called to prepare the worker in the child process (reopen the database connection, close old file descriptors from the parent process, etc).
 The `run` method should perform the main useful function of the process. It receives an object of the `ForkResult` class, which contains information about the result of the fork call.
 
 The `afterFinish` method is called in the parent process after the child process completes. Accepts as a parameter the `ForkManager` object that started and waited for the worker to complete, and the `WaitStatus` object, which contains available information about the child process - its pid, completion status, and completion flag (it is always true in this call).
